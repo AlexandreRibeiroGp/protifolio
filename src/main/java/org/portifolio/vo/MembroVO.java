@@ -9,8 +9,6 @@ import javax.persistence.Column;
 @Data
 public class MembroVO {
 
-	@JsonProperty("id")
-	private Long id;
 
 	@JsonProperty("idProjeto")
 	private Long idProjeto;

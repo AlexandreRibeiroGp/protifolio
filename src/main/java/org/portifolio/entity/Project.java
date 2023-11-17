@@ -17,8 +17,8 @@ public class Project {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "projeto_idgerente_seq")
-    @SequenceGenerator(name = "projeto_idgerente_seq", sequenceName = "projeto_idgerente_seq")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "projeto_id_seq")
+    @SequenceGenerator(name = "projeto_id_seq", sequenceName = "projeto_id_seq")
     @Column(name = "id")
     private Long id;
 

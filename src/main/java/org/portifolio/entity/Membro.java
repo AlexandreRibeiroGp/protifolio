@@ -12,12 +12,8 @@ import javax.persistence.*;
 @EqualsAndHashCode(callSuper = false)
 public class Membro {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "membros_idprojeto_seq")
-    @SequenceGenerator(name = "membros_idprojeto_seq", sequenceName = "membros_idprojeto_seq")
-    @Column(name = "id")
-    private Long id;
 
+    @Id
     @Column(name = "idprojeto")
     private Long idProjeto;
 

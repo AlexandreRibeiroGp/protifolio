@@ -26,7 +26,7 @@ public class MembroService {
 	public List<MembroVO> findAll() throws Exception {
 		List<Membro> listMembro = membroRepository.findAll();
 		if (listMembro.isEmpty()) {
-			throw new Exception("Não existe nenhum projeto cadastrado!");
+			throw new Exception("Não existe nenhum membro cadastrado!");
 		}
 		return MembroAdapter.modelToVo(listMembro);
 	}
@@ -55,7 +55,7 @@ public class MembroService {
 	}
 
 	public MembroVO excluir(MembroVO params) {
-		Optional<Membro> pro =	this.membroRepository.findById(params.getId());
+		Optional<Membro> pro =	this.membroRepository.findByIdProjeto(params.getIdProjeto());
 		if (!pro.isPresent()) {
 			params.setMsg("O membro informado não existe favor verificar");
 			return params;

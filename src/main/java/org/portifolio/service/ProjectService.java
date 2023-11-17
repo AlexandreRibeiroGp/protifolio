@@ -89,8 +89,8 @@ public class ProjectService  {
 			params.setMsg("O projeto informado não existe favor verificar o sku");
 			return params;
 		}
-		if (pro.get().getStatus().equals("andamento") ||pro.get().getStatus().equals("encerrado")) {
-			params.setMsg("O projeto em questão está em andamento ou encerrado por tanto não pode ser exclcuido");
+		if (pro.get().getStatus().equals("iniciado") ||pro.get().getStatus().equals("andamento") ||pro.get().getStatus().equals("encerrado")) {
+			params.setMsg("O projeto em questão está iniciado ou em andamento ou encerrado por tanto não pode ser exclcuido");
 			return params;
 		}
 		this.projetoRepository.delete(pro.get());
